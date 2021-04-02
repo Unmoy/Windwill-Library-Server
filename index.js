@@ -1,11 +1,11 @@
 const express = require("express");
 const app = express();
-const ObjectId = require("mongodb").ObjectId;
+const ObjectId = require("mongodb").ObjectID;
 const cors = require("cors");
 const MongoClient = require("mongodb").MongoClient;
-require("dotenv").config();
+// require("dotenv").config();
 const port = process.env.PORT || 5000;
-
+require("dotenv/config");
 app.use(cors());
 app.use(express.json());
 const urlencodedParser = express.urlencoded({ extended: false });
